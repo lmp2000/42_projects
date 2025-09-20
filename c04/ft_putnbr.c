@@ -11,9 +11,9 @@ void ft_putnbr(int nb)
         n = -n;
     }
 
-    if(nb > 9)
-        ft_putnbr(nb / 10);
-        
+    if(n > 9)
+        ft_putnbr(n / 10);
+
     c = '0' + (n % 10);
     write(1, &c, 1);
 }
