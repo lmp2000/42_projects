@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 int ft_strlen(char *str)
 {
     int len = 0;
@@ -15,7 +17,7 @@ int total_len(int size, char **strs, char *sep)
 
     while ((*strs)[i] && i < size)
     {
-        total_len += ft_strlen(str[i]);
+        total_len += ft_strlen(strs[i]);
         i++;
     }
     total_len += (ft_strlen(sep) * (size - 1)) + 1;
@@ -34,7 +36,7 @@ char *ft_strjoin(int size, char **strs, char *sep)
         free (strjoin);
     }
 
-    len = total_len(size, strs, sep);
+    int len = total_len(size, strs, sep);
 
-    strjoin = malloc(total_len * sizeof(char));
+    strjoin = malloc(len * sizeof(char));
 }
