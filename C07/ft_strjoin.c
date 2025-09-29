@@ -35,6 +35,6 @@ char *ft_strjoin(int size, char **strs, char *sep)
     }
 
     len = total_len(size, strs, sep);
-    
+
     strjoin = malloc(total_len * sizeof(char));
 }
