@@ -23,7 +23,10 @@ int	main(int argc, char **argv)
 	{
 		ptr = *argv;
 		while (*ptr)
+		{
 			ft_putchar(*ptr);
+			ptr++;
+		}
 		ft_putchar('\n');
 		argv++;
 	}
